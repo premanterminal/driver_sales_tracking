@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class TicketCard extends StatelessWidget {
-  final FlightStopTicket stop;
+  final FlightStopTicket? stop;
 
-  const TicketCard({Key key, this.stop}) : super(key: key);
+  const TicketCard({Key? key, this.stop}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +47,9 @@ class TicketCard extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
-                    child: Text(stop.from, style: airportNameStyle),
+                    child: Text(stop!.from, style: airportNameStyle),
                   ),
-                  Text(stop.fromShort, style: airportShortNameStyle),
+                  Text(stop!.fromShort, style: airportShortNameStyle),
                 ],
               ),
             ),
@@ -65,7 +65,7 @@ class TicketCard extends StatelessWidget {
                   color: Colors.red,
                 ),
               ),
-              Text(stop.flightNumber, style: flightNumberStyle),
+              Text(stop!.flightNumber, style: flightNumberStyle),
             ],
           ),
           Expanded(
@@ -76,9 +76,9 @@ class TicketCard extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
-                    child: Text(stop.to, style: airportNameStyle),
+                    child: Text(stop!.to, style: airportNameStyle),
                   ),
-                  Text(stop.toShort, style: airportShortNameStyle),
+                  Text(stop!.toShort, style: airportShortNameStyle),
                 ],
               ),
             ),

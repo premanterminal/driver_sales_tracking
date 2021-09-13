@@ -16,9 +16,9 @@ class _TicketsPageState extends State<TicketsPage>
     new FlightStopTicket("Cape Verde", "CAP", "Ireland", "IRE", "KR3452"),
     new FlightStopTicket("Ireland", "IRE", "Sahara", "SHE", "MR4321"),
   ];
-  AnimationController cardEntranceAnimationController;
-  List<Animation> ticketAnimations;
-  Animation fabAnimation;
+  AnimationController? cardEntranceAnimationController;
+  List<Animation>? ticketAnimations;
+  late Animation<double> fabAnimation;
 
   @override
   void initState() {
@@ -34,18 +34,18 @@ class _TicketsPageState extends State<TicketsPage>
       double end = duration + start;
       return new Tween<double>(begin: 800.0, end: 0.0).animate(
           new CurvedAnimation(
-              parent: cardEntranceAnimationController,
+              parent: cardEntranceAnimationController!,
               curve: new Interval(start, end, curve: Curves.decelerate)));
     }).toList();
     fabAnimation = new CurvedAnimation(
-        parent: cardEntranceAnimationController,
+        parent: cardEntranceAnimationController!,
         curve: Interval(0.7, 1.0, curve: Curves.decelerate));
-    cardEntranceAnimationController.forward();
+    cardEntranceAnimationController?.forward();
   }
 
   @override
   void dispose() {
-    cardEntranceAnimationController.dispose();
+    cardEntranceAnimationController?.dispose();
     super.dispose();
   }
 
@@ -76,13 +76,13 @@ class _TicketsPageState extends State<TicketsPage>
     return stops.map((stop) {
       int index = stops.indexOf(stop);
       return AnimatedBuilder(
-        animation: cardEntranceAnimationController,
+        animation: cardEntranceAnimationController!,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
           child: TicketCard(stop: stop),
         ),
         builder: (context, child) => new Transform.translate(
-          offset: Offset(0.0, ticketAnimations[index].value),
+          offset: Offset(0.0, ticketAnimations![index].value),
           child: child,
         ),
       );
