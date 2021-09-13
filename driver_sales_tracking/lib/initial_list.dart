@@ -7,13 +7,13 @@ List<Task> tasks = [
       category: "Arrived at 09.32 WIB",
       time: "Start Time: 08.30 WIB",
       color: Colors.cyan,
-      completed: true),
+      completed: false),
   new Task(
       name: "Destinasi 2",
       category: "On the way",
       time: "Start Time: 10.30 WIB",
       color: Colors.green,
-      completed: false),
+      completed: true),
   new Task(
       name: "Destinasi 3",
       category: "Next Journey",
