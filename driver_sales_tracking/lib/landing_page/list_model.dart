@@ -1,5 +1,5 @@
-import 'package:driver_sales_tracking/task.dart';
-import 'package:driver_sales_tracking/task_row.dart';
+import 'package:driver_sales_tracking/landing_page/task.dart';
+import 'package:driver_sales_tracking/landing_page/task_row.dart';
 import 'package:flutter/material.dart';
 
 class ListModel {

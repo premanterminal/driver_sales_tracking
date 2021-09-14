@@ -1,4 +1,4 @@
-import 'package:driver_sales_tracking/task.dart';
+import 'package:driver_sales_tracking/landing_page/task.dart';
 import 'package:flutter/material.dart';
 
 class TaskRow extends StatelessWidget {

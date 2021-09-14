@@ -1,8 +1,8 @@
-import 'package:driver_sales_tracking/animated_fab.dart';
-import 'package:driver_sales_tracking/diagonal_clipper.dart';
-import 'package:driver_sales_tracking/initial_list.dart';
-import 'package:driver_sales_tracking/list_model.dart';
-import 'package:driver_sales_tracking/task_row.dart';
+import 'package:driver_sales_tracking/landing_page/animated_fab.dart';
+import 'package:driver_sales_tracking/landing_page/diagonal_clipper.dart';
+import 'package:driver_sales_tracking/landing_page/initial_list.dart';
+import 'package:driver_sales_tracking/landing_page/list_model.dart';
+import 'package:driver_sales_tracking/landing_page/task_row.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
